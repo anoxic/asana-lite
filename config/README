@@ -1,0 +1,9 @@
+CONFIG FILES
+
+Each configuration setting is stored in a flat 
+file <setting_name> which contains the setting value.
+
+
+Available settings:
+
+token   An Asana personal access token 

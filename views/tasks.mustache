@@ -1,0 +1,26 @@
+<title>My Tasks</title>
+
+<form>
+    <select name=workspace>
+        <option value=>(Workspace)</option>
+        {{#workspaces}}
+        <option {{#selected}}selected{{/selected}} value={{id}}> {{name}} </option>
+        {{/workspaces}}
+    </select>
+    <select name=project>
+        <option value=>(Project)</option>
+        <option value=me {{#me}}selected{{/me}}>My Tasks</option>
+        {{#projects}}
+        <option value={{id}} {{#selected}}selected{{/selected}}> {{name}} </option>
+        {{/projects}}
+    </select>
+    <input type=submit>
+</form>
+
+{{#tasks}}
+<li id={{id}}>{{#title}}<b>{{/title}}{{name}}{{#title}}</b>{{/title}}
+{{/tasks}}
+
+{{#no_workspace}} NOTICE: Please select a workspace {{/no_workspace}}
+{{#no_project}} NOTICE: Please select a project {{/no_project}}
+

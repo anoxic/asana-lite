@@ -1,0 +1,13 @@
+{
+    "name": "myklv/asana-lite",
+    "description": "a light-weight version of asana intended to work through legacy clients, such as older computers, feature phones, and text-only browsers",
+    "require": {
+        "mustache/mustache": "^2.9"
+    },
+    "authors": [
+        {
+            "name": "myklv",
+            "email": "novak@myklv.com"
+        }
+    ]
+}
