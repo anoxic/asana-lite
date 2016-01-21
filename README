@@ -1,34 +1,52 @@
-Asana Lite
-----------
+(((((((((
+ ))))))))))
+(( Asana Lite
+ )))))))))
+((((((((
 
-A lightweight Asana subset.
+
+Goal
+
+To make a minimal wrapper around Asana
+that works well on degraded environments
+such as feature phones, legacy and 
+text-only browsers, and slow internet 
+connections.
 
 
 Architecture
 
-Trying to keep it as simple as possible, there are a couple of things going on:
+Trying to keep it as simple as possible,
+there are a couple of things going on:
 
-1. We use as thin a wrapper as possible around the Asana API
-2. Models are separated from views, and rendering and formatting goes through Mustache templates.
+1. We use as thin a wrapper as possible 
+   around the Asana API
+2. Models are separated from views, and
+   rendering and formatting goes through
+   Mustache templates.
 
 
 Folder Structure
 
-composer.json  Dependency definitions
-config/        Flat config files
-lib/           Application functions and classes
-public/        All public facing php files are kept here. This is instead of routes.
-vendor/        Dependencies (third-party libraries)
-views/         Where mustache templates are kept
+composer.json  Dependency definitions.
+config/        Flat config files.
+lib/           Application functions
+               and classes.
+public/        Public facing php and 
+               assets, in lieue of 
+               routing or microframeworks.
+vendor/        Third-party libraries.
+views/         Mustache templates.
 
 
 TODO
 
-o  add pagination
-o  add ability to view a task and it's subtasks
-o  add ability to update a task
-o  add ability to complete a task
-o  add error checking
-o  set up a postgres db to cache Asana tasks
-o  set up zmq to spin of background jobs to fetch data
-o  set up oAuth for authentication with Asana
+o   pagination.
+o   view single tasks and children.
+o   update a task.
+o   complete a task.
+o   error checking.
+o   postgres db for caching.
+o   zmq to spin off fetches.
+o   oauth.
+o   css.
